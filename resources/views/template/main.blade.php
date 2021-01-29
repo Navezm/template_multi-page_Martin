@@ -16,8 +16,15 @@
     <link rel="stylesheet" href="{{asset('css/business-casual.min.css')}}">
 </head>
 <body>
-    
+    @include('partials.header')
 
-    
+    @yield('content')
+
+    @include('partials.footer')
+    <!-- Bootstrap core JavaScript -->
+    <script src="{{asset('vendor/jquery/jquery.min.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+
+    @yield('script')
 </body>
 </html>

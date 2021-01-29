@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ProductsController;
+use App\Http\Controllers\StoreController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [WelcomeController::class,'welcome'])->name('w');
+
+Route::get('/about', [AboutController::class,'about'])->name('a');
+
+Route::get('/products', [ProductsController::class,'products'])->name('p');
+
+Route::get('/store', [StoreController::class,'store'])->name('s');
