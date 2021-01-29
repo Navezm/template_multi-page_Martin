@@ -1,15 +1,17 @@
 <section class="page-section cta">
     <div class="container">
-      <div class="row">
-        <div class="col-xl-9 mx-auto">
-          <div class="cta-inner text-center rounded">
-            <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Our Promise</span>
-              <span class="section-heading-lower">To You</span>
-            </h2>
-            <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+      @foreach ($promise as $item)
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <div class="cta-inner text-center rounded">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-upper">{{$item->span1}}</span>
+                <span class="section-heading-lower">{{$item->span2}}</span>
+              </h2>
+              <p class="mb-0">{{$item->p}}</p>
+            </div>
           </div>
         </div>
-      </div>
+      @endforeach
     </div>
 </section>
